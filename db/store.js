@@ -1,6 +1,8 @@
 const util = require('util');
 const fs = require('fs');
+
 const uniqId = require('uuid');
+
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 
@@ -44,6 +46,6 @@ class Store {
     .then((notes) => notes.filter((note) => note.id !== id))
     .then((filteredNotes) => this.write(filteredNotes));
   }
-}
+};
 
 module.exports = new Store();

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const store = require('../db/store');
 
 // GET route
-router.get('/notes', (req, res) => {
+router.get('/notes', (_req, res) => {
   store
    .getNotes()
    .then((notes) => {
