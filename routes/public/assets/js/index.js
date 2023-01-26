@@ -18,9 +18,9 @@ const show = (elem) => {
 };
 
 // Hide an element
-// const hide = (elem) => {
-//   elem.style.display = 'none';
-// };
+const hide = (elem) => {
+  elem.style.display = 'none';
+};
 
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
@@ -54,7 +54,7 @@ const deleteNote = (id) =>
 );
 
 const renderActiveNote = () => {
-  // hide(saveNoteBtn);
+  hide(saveNoteBtn);
 
   if (activeNote.id) {
     noteTitle.setAttribute('readonly', true);
