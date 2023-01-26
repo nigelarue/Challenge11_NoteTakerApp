@@ -5,7 +5,7 @@ router.get('/notes', (_req, res) => {
   res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 // Global routes
-router.get('*', (_req, res) => {
+router.get('/', (_req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
